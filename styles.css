@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001115;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+   
+
+}
+
+.dashboard-card {
+    background-color: #0d0d0e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 8px rgba(69, 72, 117, 0.897);
+    color: #937e7e;
+    text-align: center;
+}
+
+.logo {
+    width: 80px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px rgba(0, 191, 255, 0.6)) drop-shadow(0 0 10px rgba(0, 191, 255, 0.4)); /* Subtle navy blue neon glow */
+    animation: smoothSparkle 3s infinite ease-in-out; /* Smoother, slower sparkling animation */
+    transition: filter 0.5s ease-in-out; /* Smoother transition for glow */
+}
+
+/* Smoother sparkling animation keyframes */
+@keyframes smoothSparkle {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 5px 2px rgba(0, 191, 255, 0.3);
+    }
+    25% {
+        box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5), 0 0 7px 3px rgba(0, 191, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 3px 1.5px rgba(255, 255, 255, 0.6), 0 0 8px 4px rgba(0, 191, 255, 0.5);
+    }
+    75% {
+        box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5), 0 0 7px 3px rgba(0, 191, 255, 0.4);
+    }
+}
+
+/* Optional: Enhance hover effect for interactivity (smoother) */
+.logo:hover {
+    filter: drop-shadow(0 0 8px rgba(0, 191, 255, 0.8)) drop-shadow(0 0 12px rgba(0, 191, 255, 0.6));
+    animation: smoothSparkle 2s infinite ease-in-out; /* Slightly faster but smoother sparkle on hover */
+}
+/*///////////////////////////////////////////////////////////*/
+.title {
+    color: #ffffff; /* Neon pink */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(5, 199, 248, 0.8), 0 0 20px rgba(16, 183, 255, 0.6), 0 0 30px rgba(16, 76, 255, 0.4); /* Glow effect */
+}
+
+.status {
+    margin-bottom: 20px;
+}
+
+.label {
+    color: #f7ff01;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.value {
+    color: #f7ff01;
+    font-size: 1em;
+    margin-left: 5px;
+}
+
+.data-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.data-item {
+    background-color: #3d5266;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.data-label {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    
+}
+
+.data-value {
+    font-size: 2em;
+    color: #0ff113;
+    margin: 0;
+    animation: colorChange 3s infinite alternate;
+}
+
+.unit {
+    font-size: 30px;
+    color: #ffffff;
+    margin-left: 5px;
+    text-shadow: 0 0 10px rgba(5, 199, 248, 0.8), 0 0 20px rgba(16, 183, 255, 0.6), 0 0 30px rgba(16, 76, 255, 0.4); /* Glow effect */
+}
+
+.esp-section {
+    margin-top: 20px;
+}
+
+.esp-label{
+    color: #f7ff01;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.esp-info {
+    color: #82f3ef;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.esp-status {
+    color: #f8f6f6;
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(5, 199, 248, 0.8), 0 0 20px rgba(16, 183, 255, 0.6), 0 0 30px rgba(16, 76, 255, 0.4); /* Glow effect */
+}
+.wake-button {
+    background: linear-gradient(45deg, #14d4ff, #1500ff); /* Neon green gradient */
+    color: #ffffff;
+    margin-top: 20px;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    width: 100%;
+    max-width: 200px;
+    height: 80px;
+    box-shadow: 0 0 10px rgba(20, 196, 255, 0.8), 0 0 20px rgba(20, 212, 255, 0.6), 0 0 30px rgba(57, 255, 20, 0.4); /* Neon glow effect */
+}
+
+.wake-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #2eff00, #39ff14); /* Swap gradient for hover */
+    box-shadow: 0 0 15px rgba(57, 255, 20, 1), 0 0 30px rgba(57, 255, 20, 0.8), 0 0 40px rgba(57, 255, 20, 0.6); /* Enhanced glow on hover */
+}
+
+.wake-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px rgba(57, 255, 20, 0.6), 0 0 10px rgba(57, 255, 20, 0.4); /* Reduced glow on click */
+}
+.wake-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #2980b9, #3498db);
+}
+
+/*//////////////////////////////////////////////////////*/
+.relay {
+    background: linear-gradient(45deg, #ff3f14, #d9ff00); /* Neon green gradient */
+    color: #830404;
+    border: none;
+    margin-top: 10px;
+    padding: 12px 24px;
+    border-radius: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    width: 100%;
+    max-width: 200px;
+    height: 80px;
+    box-shadow: 0 0 10px rgba(255, 98, 20, 0.8), 0 0 20px rgba(20, 212, 255, 0.6), 0 0 30px rgba(57, 255, 20, 0.4); /* Neon glow effect */
+}
+
+.relay:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff0000, #ffb114); /* Swap gradient for hover */
+    box-shadow: 0 0 15px rgba(57, 255, 20, 1), 0 0 30px rgba(57, 255, 20, 0.8), 0 0 40px rgba(57, 255, 20, 0.6); /* Enhanced glow on hover */
+}
+
+.relay:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px rgba(57, 255, 20, 0.6), 0 0 10px rgba(57, 255, 20, 0.4); /* Reduced glow on click */
+}
+
+
+@keyframes colorChange {
+    0% { color: #47f10f; }
+    50% { color: #bbfcff; }
+    100% { color: #fdf33a; }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .dashboard-card {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 50 px;
+    }
+
+    .data-value {
+        font-size: 40px;
+    }
+
+    .wake-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}

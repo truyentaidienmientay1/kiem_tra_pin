@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống giám sát năng lượng AIoT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel='shortcut icon' href='ICON.jpg' />
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-card">
+            <img src="./ai.png" alt="AIoT Logo" class="logo">
+            <h1 class="title">HỆ THỐNG GIÁM SÁT NĂNG LƯỢNG AIOT</h1>
+            <div class="status">
+                <span class="label">Kiểm tra kết nối:</span>
+                <span id="connectionStatus" class="value">đang kết nối</span>
+            </div>
+            <div class="data-section">
+                <div class="data-item">
+                    <p class="data-label">Điện áp khối pin</p>
+                    <p id="batteryVoltage" class="data-value">13.2 <span class="unit">V</span></p>
+                </div>
+                <div class="data-item">
+                    <p class="data-label">Điện áp năng lượng mặt trời</p>
+                    <p id="solarVoltage" class="data-value">34 <span class="unit" >V</span></p>
+                </div>
+            </div>
+            <div class="esp-section">
+                <!-- <p class="esp-label">Đánh thức ESP32</p> -->
+                <p class="esp-status">Trạng thái: Đang kiểm tra</p>
+                <p class="esp-info">Thông tin: Đang kiểm tra</p>
+                <button id="wakeButton" class="wake-button">Nút đánh thức</button>
+        
+            </div>
+            <br>
+            <p class="restart" style="color: aliceblue;">Trạng thái: đang kiểm tra</p>
+            <button id="relay_button" class="relay">Restart Raspi</button>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
